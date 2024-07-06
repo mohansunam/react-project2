@@ -5,7 +5,7 @@ const Tech = () => {
   return (
     <div>
       <h1 className='text-3xl font-bold text-center'>Technologies I use</h1>
-      <div className="dev-icons grid grid-cols-4 justify-center">
+      <div className='dev-icons grid justify-center sm:grid-cols-1 md:grid-cols-2 lg: grid-cols-4'>
         <DiHtml5 color='blue' size={200} className='animate-bounce' />
         <DiAndroid color='blue' size={200}className='animate-spin'/>
         <DiPython color='blue' size={200}/>
