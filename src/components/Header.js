@@ -3,11 +3,11 @@ import React from 'react'
 const Header = () => {
   return (
     <div>
-      <header className='bg-black text-white flex'>
-        <h1>Tail Web</h1>
-        <nav>
-          <a href="">About</a>
-          <a href="">Contact</a>
+      <header className='bg-black text-white flex items-baseline justify-between px-2 py-4'>
+        <h1 className='text-2xl'>Tail Web</h1>
+        <nav className='space-x-5'>
+          <a className='same' href="">About</a>
+          <a className='same' href="">Contact</a>
         </nav>
       </header>
     </div>
