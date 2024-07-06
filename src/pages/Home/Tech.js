@@ -1,4 +1,4 @@
-import React from 'react'
+port React from 'react'
 import { DiAndroid, DiAngularSimple, DiApple, DiBootstrap, DiCss3, DiHtml5, DiJavascript, DiNodejs, DiPhp, DiPython } from 'react-icons/di'
 
 const Tech = () => {
