@@ -17,3 +17,12 @@
   border: 6px solid green;
   box-shadow: 2px;
 }
+.foot-1{
+  position: relative;
+  
+}
+.foot-2{
+ position: absolute;
+  right: 45%;
+  bottom: 25%;
+}
