@@ -9,9 +9,13 @@ const Home = () => {
 
   return (
     <div className='p-8'>
-      <h1>{count}</h1>
-      <button onClick={handleCount}>Add Me</button>
+      <div>
+      <h1>{count % 2=== 0 ? `Even number ${count}` : `Odd Number ${count}`}</h1>
+      <button  onClick={handleCount}>Add Me</button>
       
+
+      </div>
+
     </div>
   )
 }
