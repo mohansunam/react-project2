@@ -1,22 +1,34 @@
+import { faker } from '@faker-js/faker';
 import React, { useState } from 'react'
 
 const Home = () => {
-  const [count, setCount] = useState(0);
-  const handleCount = ()=>{
-    setCount((p)=> p + 1);
+  const [users, setUser]= useState([]);
+  const handleKey = () =>{
+    const newObj = {
+      name: faker.internet.userName(),
+      email: faker.internet.email(),
+      image: faker.image.avatarLegacy()
+    }
+    setUser((pre) => [...pre, newObj]);
   }
 
 
   return (
-    <div className='p-8'>
-      <div>
-      <h1>{count % 2=== 0 ? `Even number ${count}` : `Odd Number ${count}`}</h1>
-      <button  onClick={handleCount}>Add Me</button>
-      
-
+    <div className='p-10'>
+      <div className='flex justify-end'>
+      <button className='bg-red-500 p-3' onClick={handleKey}>Add new</button> 
       </div>
+       {users.map((u, i) => {
+        return <div key ={i}>
+          <img src={u.image} alt="" />
+          <h1>{u.name}</h1>
+          <h1>{u.email}</h1>
 
+        </div>
+       })}
+     
     </div>
+   
   )
 }
 
