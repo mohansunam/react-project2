@@ -1,5 +1,6 @@
 import { faker } from '@faker-js/faker';
 import React, { useState } from 'react'
+import ProfileCard from '../components/ProfileCard';
 
 const Home = () => {
   const [users, setUser]= useState([]);
@@ -18,14 +19,11 @@ const Home = () => {
       <div className='flex justify-end'>
       <button className='bg-red-500 p-3' onClick={handleKey}>Add new</button> 
       </div>
-       {users.map((u, i) => {
-        return <div key ={i}>
-          <img src={u.image} alt="" />
-          <h1>{u.name}</h1>
-          <h1>{u.email}</h1>
-
-        </div>
-       })}
+       {users.map((u, i)=>{
+        return <ProfileCard user={u} key={i}/>
+      })}
+      
+    
      
     </div>
    
