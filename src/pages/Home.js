@@ -1,32 +1,18 @@
-import { faker } from '@faker-js/faker';
-import React, { useState } from 'react'
-import ProfileCard from '../components/ProfileCard';
+import React from 'react'
 
 const Home = () => {
-  const [users, setUser]= useState([]);
-  const handleKey = () =>{
-    const newObj = {
-      name: faker.internet.userName(),
-      email: faker.internet.email(),
-      image: faker.image.avatarLegacy()
-    }
-    setUser((pre) => [...pre, newObj]);
-  }
+  const handle = () => {
+    const m = document.getElementById('name')
+    m.innerText = 'Chandra';
 
+  }
 
   return (
     <div className='p-10'>
-      <div className='flex justify-end'>
-      <button className='bg-red-500 p-3' onClick={handleKey}>Add new</button> 
-      </div>
-       {users.map((u, i)=>{
-        return <ProfileCard user={u} key={i}/>
-      })}
+      <h1 id='name'>Hello Mohan</h1>
+      <button onClick={handle}>click</button>
       
-    
-     
     </div>
-   
   )
 }
 
